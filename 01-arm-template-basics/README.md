@@ -1,4 +1,4 @@
-# Project - Basic ARM Template Deployment
+# Project 01 - Basic ARM Template Deployment
 
 ## Description
 This project demonstrates creating and deploying Azure resources using an **Azure Resource Manager (ARM)** JSON template as part of the AZ-104 training.
