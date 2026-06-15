@@ -35,8 +35,8 @@ This project demonstrates creating a basic ARM template from scratch, deploying 
 ```powershell
 Connect-AzAccount
 
-New-AzResourceGroup -Name "rg-arm-exercise" -Location "eastus"
-Set-AzDefault -ResourceGroupName "rg-arm-exercise"
+New-AzResourceGroup -Name "rg-chiji-arm-demo" -Location "southafricanorth"
+Set-AzDefault -ResourceGroupName "rg-chiji-arm-demo"
 
 $templateFile = "azuredeploy.json"
 $today = Get-Date -Format "MM-dd-yyyy"
