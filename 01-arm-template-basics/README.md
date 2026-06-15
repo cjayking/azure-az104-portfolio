@@ -1,7 +1,7 @@
 # Project 01 - Create and Deploy a Basic ARM Template
 
 ## Description
-**"Exercise - Create and deploy an Azure Resource Manager template"**.  
+**Create and deploy an Azure Resource Manager template**.  
 This project demonstrates creating a basic ARM template from scratch, deploying it using Azure PowerShell, and understanding the template structure.
 
 ## Exercise Objectives Completed
