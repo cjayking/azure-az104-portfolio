@@ -1,32 +1,47 @@
-# Project 01 - Basic ARM Template Deployment
+# Project 01 - Create and Deploy a Basic ARM Template
 
 ## Description
-This project demonstrates creating and deploying Azure resources using an **Azure Resource Manager (ARM)** JSON template as part of the AZ-104 training.
+Completed the official Microsoft Learn exercise: **"Exercise - Create and deploy an Azure Resource Manager template"**.  
+This project demonstrates creating a basic ARM template from scratch, deploying it using Azure PowerShell, and understanding the template structure.
 
-## Resources Deployed
-- Storage Account (or Virtual Network / other resource from the exercise)
+## Exercise Objectives Completed
+- Created `azuredeploy.json` with the full ARM template skeleton
+- Deployed the template using `New-AzResourceGroupDeployment`
+- Verified the deployment in Azure Portal
+- Understood all main sections of an ARM template (`parameters`, `variables`, `resources`, `outputs`, etc.)
 
 ## Technologies Used
-- Azure Resource Manager (ARM Templates)
+- Azure Resource Manager (ARM) Templates
 - JSON
-- Azure PowerShell (`New-AzResourceGroupDeployment`)
-- VS Code with Azure Resource Manager Tools extension
-- Azure Portal (Export Template feature)
+- Visual Studio Code
+- Azure PowerShell (`Connect-AzAccount`, `New-AzResourceGroupDeployment`)
+- Azure Portal
 
-## Deployment Steps
-1. Created a resource manually in the Azure Portal
-2. Exported the resource as an ARM template (`azuredeploy.json`)
-3. Opened and reviewed the template in VS Code
-4. Deployed the template using PowerShell
-5. Verified the deployment in the Azure Portal
-6. Deleted the resources to stay in the free tier
+## Steps Followed (from Microsoft Learn)
 
-## Commands Used
+1. Created a new file `azuredeploy.json` in VS Code
+2. Added the basic ARM template skeleton
+3. Opened PowerShell terminal in VS Code
+4. Connected to Azure using `Connect-AzAccount`
+5. Created a Resource Group (`rg-arm-exercise`)
+6. Deployed the template using `New-AzResourceGroupDeployment`
+7. Verified the successful deployment in the Azure Portal
+
+## Files
+- [`azuredeploy.json`](./azuredeploy.json) — Basic ARM template
+
+## Deployment Commands Used
+
 ```powershell
-# Connect to Azure
 Connect-AzAccount
 
-# Deploy the ARM template
+New-AzResourceGroup -Name "rg-arm-exercise" -Location "eastus"
+Set-AzDefault -ResourceGroupName "rg-arm-exercise"
+
+$templateFile = "azuredeploy.json"
+$today = Get-Date -Format "MM-dd-yyyy"
+$deploymentName = "blanktemplate-" + $today
+
 New-AzResourceGroupDeployment `
-  -ResourceGroupName "rg-arm-demo" `
-  -TemplateFile "azuredeploy.json"
+  -Name $deploymentName `
+  -TemplateFile $templateFile
