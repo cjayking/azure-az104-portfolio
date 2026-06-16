@@ -81,7 +81,7 @@ This project demonstrates creating an ARM template from scratch, making it flexi
     }
   }
 }
-
+```json
 
 ## Screenshots
 
