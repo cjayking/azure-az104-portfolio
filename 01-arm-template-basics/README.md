@@ -1,7 +1,7 @@
 # Project 01 - Create and Deploy an Azure Resource Manager (ARM) Template
 
 ## Project Description
-Completed the full official Microsoft Learn exercise: **"Exercise - Create and deploy an Azure Resource Manager template"** including parameters and outputs.
+**Exercise - Create and deploy an Azure Resource Manager template** including parameters and outputs.
 
 This project demonstrates creating an ARM template from scratch, making it flexible with parameters, adding validation, and returning outputs.
 
