@@ -1,47 +1,37 @@
-# Project 01 - Create and Deploy a Basic ARM Template
+# Project 01 - Create and Deploy an Azure Resource Manager (ARM) Template
 
 ## Description
-**Create and deploy an Azure Resource Manager template**.  
-This project demonstrates creating a basic ARM template from scratch, deploying it using Azure PowerShell, and understanding the template structure.
+Completed the official Microsoft Learn exercise: **"Exercise - Create and deploy an Azure Resource Manager template"** including parameters and outputs.
 
-## Exercise Objectives Completed
-- Created `azuredeploy.json` with the full ARM template skeleton
-- Deployed the template using `New-AzResourceGroupDeployment`
-- Verified the deployment in Azure Portal
-- Understood all main sections of an ARM template (`parameters`, `variables`, `resources`, `outputs`, etc.)
+## Objectives Completed
+- Created basic ARM template
+- Added Storage Account resource
+- Made template flexible using **parameters** (`storageName`, `storageSKU`)
+- Added **outputs** to return storage endpoints
+- Demonstrated idempotency (update existing resource)
+- Tested input validation (`allowedValues`)
+
+## Resource Group
+- Name: `rg-chiji-arm-demo`
+- Location: `southafricanorth`
 
 ## Technologies Used
 - Azure Resource Manager (ARM) Templates
-- JSON
+- Azure PowerShell
 - Visual Studio Code
-- Azure PowerShell (`Connect-AzAccount`, `New-AzResourceGroupDeployment`)
 - Azure Portal
 
-## Steps Followed (from Microsoft Learn)
+## Final Template Features
+- Parameterized Storage Account name
+- SKU selection with allowed values
+- Dynamic location using `resourceGroup().location`
+- Output of storage endpoints
 
-1. Created a new file `azuredeploy.json` in VS Code
-2. Added the basic ARM template skeleton
-3. Opened PowerShell terminal in VS Code
-4. Connected to Azure using `Connect-AzAccount`
-5. Created a Resource Group (`rg-arm-exercise`)
-6. Deployed the template using `New-AzResourceGroupDeployment`
-7. Verified the successful deployment in the Azure Portal
-
-## Files
-- [`azuredeploy.json`](./azuredeploy.json) — Basic ARM template
-
-## Deployment Commands Used
+## Deployment Examples
 
 ```powershell
-Connect-AzAccount
-
-New-AzResourceGroup -Name "rg-chiji-arm-demo" -Location "southafricanorth"
-Set-AzDefault -ResourceGroupName "rg-chiji-arm-demo"
-
-$templateFile = "azuredeploy.json"
-$today = Get-Date -Format "MM-dd-yyyy"
-$deploymentName = "blanktemplate-" + $today
-
 New-AzResourceGroupDeployment `
   -Name $deploymentName `
-  -TemplateFile $templateFile
+  -TemplateFile "azuredeploy.json" `
+  -storageName "chijistorage2026" `
+  -storageSKU "Standard_LRS"
