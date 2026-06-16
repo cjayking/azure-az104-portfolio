@@ -16,7 +16,7 @@ This project demonstrates creating an ARM template from scratch, making it flexi
 
 ## Resource Group
 - **Name**: `rg-chiji-arm-demo`
-- **Location**: `southafricanorth` (closest Azure region to Togo)
+- **Location**: `southafricanorth`
 
 ## Technologies Used
 - Azure Resource Manager (ARM) Templates (JSON)
