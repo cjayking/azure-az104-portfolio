@@ -86,22 +86,25 @@ This project demonstrates creating an ARM template from scratch, making it flexi
 ## Screenshots
 
 ![1. Basic Empty ARM Template](./screenshots/01-empty-template.png)  
-*Starting point - Empty ARM template*
+**Basic Empty Template** – Starting point
 
-![2. Storage Account Added](./screenshots/02-hardcoded-storage.png)  
-*Hardcoded Storage Account version*
+![2. Resource Group Creation](./screenshots/02-resource-group-creation.png)  
+**Resource Group Created**
 
-![3. Parameters Added](./screenshots/03-parameters-added.png)  
-*Added storageName and storageSKU parameters with validation*
+![3. Blank Template Deployment](./screenshots/03-blank-deployment.png)  
+**First Deployment (Blank Template)**
 
-![4. Final Template](./screenshots/04-final-template-with-outputs.png)  
-*Complete template with parameters and outputs*
+![4. Storage Account Added](./screenshots/04-hardcoded-storage.png)  
+**Storage Account Resource Added (Hardcoded)**
 
-![5. Successful Deployment](./screenshots/05-deployment-success.png)  
-*PowerShell deployment showing parameters and outputs*
+![5. Parameters Added](./screenshots/05-parameters-added.png)  
+**Parameters (`storageName` + `storageSKU`) Added with Validation**
 
-![6. Deployments List](./screenshots/06-deployments-list.png)  
-*Multiple successful deployments in Azure Portal*
+![6. Final Template with Outputs](./screenshots/06-final-template.png)  
+**Final Template with Outputs**
 
-![7. Outputs Tab](./screenshots/07-outputs-tab.png)  
-*Storage endpoints returned after deployment*
+![7. Successful Deployment with Outputs](./screenshots/07-deployment-with-outputs.png)  
+**Deployment Showing Parameters and Outputs**
+
+![8. Deployments List in Azure Portal](./screenshots/08-deployments-list.png)  
+**Multiple Successful Deployments**
