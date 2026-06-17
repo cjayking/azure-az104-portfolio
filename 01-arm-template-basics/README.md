@@ -15,7 +15,7 @@ This project demonstrates building an ARM template from scratch, adding a real r
 - Visual Studio Code
 - Azure Portal
 
-## Journey & Screenshots
+## Screenshots
 
 ![1. Starting Point](./screenshots/01-starting-point.png)  
 **Starting Point** – Empty ARM template, Resource Group creation, and first blank deployment
