@@ -84,27 +84,17 @@ This project demonstrates creating an ARM template from scratch, making it flexi
 ```
 
 ## Screenshots
+![1. Starting Point](./screenshots/01-starting-point.png)  
+**Starting Point** – Empty ARM template, Resource Group creation, and first blank deployment
 
-![1. Basic Empty ARM Template](./screenshots/01-empty-template.png)  
-**Basic Empty Template** – Starting point
+![2. Adding Storage Account](./screenshots/02-hardcoded-storage.png)  
+**Adding Storage Account Resource** – Hardcoded version
 
-![2. Resource Group Creation](./screenshots/02-resource-group-creation.png)  
-**Resource Group Created**
+![3. Parameters & Outputs](./screenshots/03-parameters-and-outputs.png)  
+**Adding Flexibility** – Parameters (`storageName`, `storageSKU` with validation) and Outputs
 
-![3. Blank Template Deployment](./screenshots/03-blank-deployment.png)  
-**First Deployment (Blank Template)**
+![4. Successful Deployment](./screenshots/04-deployment-success.png)  
+**Successful Deployment** – Showing parameters passed and outputs returned
 
-![4. Storage Account Added](./screenshots/04-hardcoded-storage.png)  
-**Storage Account Resource Added (Hardcoded)**
-
-![5. Parameters Added](./screenshots/05-parameters-added.png)  
-**Parameters (`storageName` + `storageSKU`) Added with Validation**
-
-![6. Final Template with Outputs](./screenshots/06-final-template.png)  
-**Final Template with Outputs**
-
-![7. Successful Deployment with Outputs](./screenshots/07-deployment-with-outputs.png)  
-**Deployment Showing Parameters and Outputs**
-
-![8. Deployments List in Azure Portal](./screenshots/08-deployments-list.png)  
-**Multiple Successful Deployments**
+![5. Multiple Deployments](./screenshots/05-deployments-list.png)  
+**Multiple Successful Deployments** – Demonstrating idempotency in Azure Portal
